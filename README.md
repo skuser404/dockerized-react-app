@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Dockerized React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application containerized using Docker to demonstrate frontend containerization and deployment concepts.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+This project shows how a React application can be packaged into a Docker container and run consistently across different environments.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* React.js
+* Docker
+* Node.js
+* Create React App
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+* React frontend application
+* Docker containerization
+* Port mapping
+* Easy deployment using Docker
+* Cross-platform compatibility
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+```
+dockerized-react-app/
+├── public/
+├── src/
+├── Dockerfile
+├── .dockerignore
+├── package.json
+└── README.md
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Docker installed
+* Node.js (optional for local development)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Build Docker Image
 
-### `npm run eject`
+```bash
+docker build -t dockerized-react-app .
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Run Docker Container
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+docker run -p 3000:3000 dockerized-react-app
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Access Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Open your browser and navigate to:
 
-## Learn More
+```
+http://localhost:3000
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Docker Concepts Demonstrated
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="1470" height="956" alt="Screenshot 2026-06-01 at 7 36 08 PM" src="https://github.com/user-attachments/assets/599b12d9-dc18-4566-9676-9fc9104dbdee" />
 
-### Code Splitting
+<img width="1470" height="956" alt="image" src="https://github.com/user-attachments/assets/ef369897-cd28-4e5e-bcf9-1975f442a25d" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img width="1470" height="956" alt="Screenshot 2026-06-01 at 6 48 20 PM" src="https://github.com/user-attachments/assets/f7f06d4b-a32c-4328-ab50-3774db0a0c0c" />
 
-### Analyzing the Bundle Size
+<img width="1470" height="956" alt="image" src="https://github.com/user-attachments/assets/de326148-4eb5-46a2-8675-24518a42dc51" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future Improvements
 
-### Making a Progressive Web App
+* Multi-stage Docker builds
+* Nginx integration
+* Docker Compose support
+* CI/CD with GitHub Actions
+* AWS EC2 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Author
 
-### Advanced Configuration
+Jayanth Somala
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT License
